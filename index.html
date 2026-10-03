@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phulka: Dhaba Cooking Game — Cozy GT Road Cooking on iOS &amp; Android</title>
+  <meta name="description" content="Run Daadi's roadside dhaba on the Grand Trunk Road. Cook rotis, ladle dal, and feed hungry travelers with kindness. A heartwarming cozy cooking game on iOS (TestFlight &amp; App Store) and Android (Google Play).">
+  <link rel="canonical" href="https://harkirat1892.github.io/phulka-website/">
+  <meta name="theme-color" content="#D97706">
+
+  <!-- Favicon & Touch Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icon.png">
+  <link rel="apple-touch-icon" href="images/icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://harkirat1892.github.io/phulka-website/">
+  <meta property="og:title" content="Phulka: Dhaba Cooking Game — Cook rotis. Serve dal. Nobody leaves hungry.">
+  <meta property="og:description" content="Step up to Daadi's cast-iron tawa on the GT Road. Slap dough, puff rotis over flame, and feed weary travelers. A heartwarming story of kindness, Punjabi hospitality, and cozy cooking.">
+  <meta property="og:image" content="https://harkirat1892.github.io/phulka-website/images/feature-graphic.png">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="500">
+  <meta property="og:site_name" content="Phulka">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Phulka: Dhaba Cooking Game — Cook rotis. Serve dal. Nobody leaves hungry.">
+  <meta name="twitter:description" content="Run Daadi's roadside dhaba on the GT Road. Cook rotis, serve dal, and feed hungry travelers with kindness. Available on iOS &amp; Android.">
+  <meta name="twitter:image" content="https://harkirat1892.github.io/phulka-website/images/feature-graphic.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Phulka: Dhaba Cooking Game",
+    "operatingSystem": "iOS, Android",
+    "applicationCategory": "GameApplication",
+    "genre": "Casual Cooking Game",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Harkirat Singh",
+      "email": "sifarlabs5@gmail.com"
+    },
+    "description": "Run Daadi's roadside dhaba on the Grand Trunk Road. Cook rotis, serve dal, and feed hungry travelers with kindness. No ads, no tracking, works offline."
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Header & Navigation
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#top" class="brand" aria-label="Phulka Home">
+        <img src="images/icon.png" alt="Phulka Icon" class="brand-icon" width="44" height="44">
+        <div class="brand-title">
+          <span class="brand-name">Phulka</span>
+          <span class="brand-tagline">Daadi's Roadside Dhaba</span>
+        </div>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#story" class="nav-link">Heartwarming Story</a></li>
+        <li><a href="#gameplay" class="nav-link">How to Play</a></li>
+        <li><a href="#screenshots" class="nav-link">Screenshots</a></li>
+        <li><a href="#download" class="nav-link">Download</a></li>
+        <li><a href="privacy.html" class="nav-link">Privacy</a></li>
+        <li><a href="#download" class="nav-cta">Get the Game</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ==========================================================================
+         Hero Section
+         ========================================================================== -->
+    <section class="hero-section">
+      <div class="hero-backdrop-glow" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge-pill">
+            <span class="pill-dot" aria-hidden="true"></span>
+            A Cozy Roadside Cooking Game
+          </div>
+          <h1 class="hero-title">
+            Cook. Serve.<br>
+            <span class="highlight">Nobody leaves hungry.</span>
+          </h1>
+          <p class="hero-subtitle">
+            Daadi's knees have retired. From today, the tawa is yours.
+          </p>
+          <p class="hero-desc">
+            Step behind the counter of a cozy roadside dhaba on the bustling Grand Trunk Road. Slap dough on the cast-iron tawa, puff golden rotis over dancing flames, ladle slow-cooked dal, and welcome weary travelers with warmth, kindness, and heart.
+          </p>
+
+          <!-- Store Buttons -->
+          <div class="hero-cta-group">
+            <a href="https://testflight.apple.com/join/DaCxtxen" class="btn-store btn-ios" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 3.62c.67-.82 1.13-1.97.99-3.12-1.02.05-2.22.68-2.92 1.5-.61.71-1.15 1.87-.99 2.99 1.13.09 2.28-.58 2.92-1.37z"/>
+              </svg>
+              <div class="btn-store-text">
+                <span class="btn-store-small">iOS TestFlight &amp; Store</span>
+                <span class="btn-store-large">Play on iPhone</span>
+              </div>
+            </a>
+
+            <a href="https://play.google.com/store/apps/details?id=com.phulka.app" class="btn-store btn-android" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M3.609 1.814L13.793 12 3.61 22.186c-.378-.344-.61-.837-.61-1.393V3.207c0-.556.232-1.05.609-1.393zm11.305 11.306l2.12 2.12-11.83 6.64 9.71-8.76zm2.12-2.12l-2.12-2.12 9.71-8.76-11.83 6.64 2.12 2.12zm1.414 1.414l3.18-1.785c.67-.376.67-.99 0-1.366l-3.18-1.785-1.94 1.94 1.94 1.996z"/>
+              </svg>
+              <div class="btn-store-text">
+                <span class="btn-store-small">Google Play Store</span>
+                <span class="btn-store-large">Play on Android</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="trust-badges-strip">
+            <div class="trust-badge-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+              <span>Free to Play</span>
+            </div>
+            <div class="trust-badge-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M1 1l22 22M16.72 11.06A10.94 10.94 0 0 1 19 12.55M5 12.55a10.94 10.94 0 0 1 5.17-2.39M10.71 5.05A16 16 0 0 1 22.58 9M1.42 9a15.91 15.91 0 0 1 4.7-2.88M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/>
+              </svg>
+              <span>100% Offline</span>
+            </div>
+            <div class="trust-badge-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+              <span>Zero Ads &amp; No Tracking</span>
+            </div>
+            <div class="trust-badge-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+              </svg>
+              <span>Up to 120 FPS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Graphic Showcase -->
+        <div class="hero-visual-col">
+          <div class="hero-art-card">
+            <div class="hero-icon-wrapper">
+              <img src="images/icon.png" alt="Phulka on hot tawa with melting butter" class="hero-icon-img" width="170" height="170">
+              <span class="hero-steam-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+                Hot &amp; Fresh
+              </span>
+            </div>
+
+            <div class="hero-card-quote">
+              <p>&ldquo;Puttar, my knees have retired. From today, the tawa is yours.&rdquo;</p>
+              <cite>— Daadi</cite>
+            </div>
+
+            <div class="hero-card-preview-thumb">
+              <img src="images/screenshots/1.png" alt="Daadi's Dhaba roadside view on the GT Road">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Why Phulka is a Heartwarming Story
+         ========================================================================== -->
+    <section class="section section-bg-warm" id="story">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">The Soul of the Game</span>
+          <h2 class="section-title">Why Phulka is a Heartwarming Story to Play</h2>
+          <p class="section-lead">
+            Most cooking games test your stress limits with ticking timers and furious customers. Phulka does the opposite: it invites you into a world of comfort, generosity, and genuine human connection.
+          </p>
+        </div>
+
+        <div class="story-grid">
+          <!-- Card 1 -->
+          <article class="story-card">
+            <div class="story-icon-bubble" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+            </div>
+            <h3 class="story-card-title">Daadi Hands Over the Tawa</h3>
+            <p class="story-card-text">
+              After decades on the Grand Trunk Road, Daadi’s knees need a rest. She hands you the keys, her recipes, and her sharp wit. She sits right beside you on the wooden bench—offering proud smiles when your phulkas puff high, and gentle chuckles when one gets a little too crisp.
+            </p>
+            <span class="story-card-tag">Family &amp; Legacy</span>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="story-card">
+            <div class="story-icon-bubble" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </div>
+            <h3 class="story-card-title">The Rule: &ldquo;Nobody Leaves Hungry&rdquo;</h3>
+            <p class="story-card-text">
+              When an exhausted highway trucker has only a few coins left, or a tired student in exam week is short on cash, you don't turn them away. Daadi reminds you: <em>&ldquo;Your dhaba, your call.&rdquo;</em> Put their meal on the house. In Phulka, generosity is never penalized—it turns passersby into lifelong friends.
+            </p>
+            <span class="story-card-tag">Pay What You Can</span>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="story-card">
+            <div class="story-icon-bubble" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
+            </div>
+            <h3 class="story-card-title">The Living Spirit of Seva &amp; Langar</h3>
+            <p class="story-card-text">
+              Rooted in the timeless Punjabi and Sikh tradition of langar—where everyone sits side by side as equals to share food—Phulka conveys culture through warmth and action, never through lectures. It is the simple, sacred joy of feeding people with unconditional love.
+            </p>
+            <span class="story-card-tag">Punjabi Hospitality</span>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="story-card">
+            <div class="story-icon-bubble" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              </svg>
+            </div>
+            <h3 class="story-card-title">Daadi's Regulars' Book</h3>
+            <p class="story-card-text">
+              Every guest on the highway has a journey. Mr. Sethi who is always rushing, Bebe who wants her roti soft, the trucker doing the Delhi–Amritsar night run, and the shy kid down the road. Every visit reveals another chapter of their lives in Daadi’s handwritten book.
+            </p>
+            <span class="story-card-tag">Unfolding Characters</span>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="story-card">
+            <div class="story-icon-bubble" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+              </svg>
+            </div>
+            <h3 class="story-card-title">Bedtime Stories Under the Stars</h3>
+            <p class="story-card-text">
+              When the service ends, the highway quiets down, and the wooden galla is counted, Daadi invites you: <em>&ldquo;Sit with me a minute. Want to hear a story my Daadi told me?&rdquo;</em> Unwind each evening with sweet, 1-minute Punjabi folklore and heartwarming bedtime tales.
+            </p>
+            <span class="story-card-tag">Evening Rituals</span>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="story-card">
+            <div class="story-icon-bubble" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3 class="story-card-title">Pure, Peaceful Craftsmanship</h3>
+            <p class="story-card-text">
+              No obnoxious video ads interrupting your cooking. No timers forcing you to pay real money. No analytics or tracking your phone. Phulka is built with honest hand-drawn art, authentic acoustic instruments, and a silky 120 FPS engine that runs completely offline.
+            </p>
+            <span class="story-card-tag">Respect for Players</span>
+          </article>
+        </div>
+
+        <!-- Daadi's Golden Rule Banner -->
+        <div class="golden-rule-banner">
+          <div class="golden-rule-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          </div>
+          <div class="golden-rule-content">
+            <h3>&ldquo;Some customers can't pay the full bill. Take what they have, or put it on the house. Nobody leaves hungry.&rdquo;</h3>
+            <p>In Phulka, going broke is impossible. Kindness is an active choice with no penalties—only full bellies, grateful smiles, and warm memories.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Gameplay & Features
+         ========================================================================== -->
+    <section class="section" id="gameplay">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">A Day at the Dhaba</span>
+          <h2 class="section-title">Cooking with Rhythm, Rhythm with Heart</h2>
+          <p class="section-lead">
+            Master the satisfying rhythm of authentic roadside cooking. Simple, tactile, and deeply satisfying to play on touchscreens.
+          </p>
+        </div>
+
+        <div class="gameplay-steps-grid">
+          <div class="gameplay-step-card">
+            <div class="step-number-badge">1</div>
+            <h3 class="gameplay-step-title">Slap, Flip &amp; Puff</h3>
+            <p class="gameplay-step-desc">
+              Drop dough on the hot cast-iron tawa. Watch the blisters rise, flip it at the exact moment, then hold it over the open flame until it puffs into a round, golden phulka. Watch the clock—or the crows will get lunch!
+            </p>
+          </div>
+
+          <div class="gameplay-step-card">
+            <div class="step-number-badge">2</div>
+            <h3 class="gameplay-step-title">Ladle Dal &amp; Pour Lassi</h3>
+            <p class="gameplay-step-desc">
+              Keep the big degh of dal simmering with fresh tadka. Pour chilled sweet lassi into earthenware glasses, and assemble complete, steaming thalis with a generous pat of golden homemade butter.
+            </p>
+          </div>
+
+          <div class="gameplay-step-card">
+            <div class="step-number-badge">3</div>
+            <h3 class="gameplay-step-title">Handle Highway Rushes</h3>
+            <p class="gameplay-step-desc">
+              When interstate passenger buses pull over, a dozen travelers walk up at once. Prioritize orders, keep your cool, and drag the right dishes to the right customers before their patience slips away.
+            </p>
+          </div>
+
+          <div class="gameplay-step-card">
+            <div class="step-number-badge">4</div>
+            <h3 class="gameplay-step-title">Upgrade the Dhaba</h3>
+            <p class="gameplay-step-desc">
+              Count today's galla and invest your honest earnings back into the dhaba. Hang warm fairy lights, add wooden charpais, bring in a second tawa, or buy a cooler matka for ice-cold lassi.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature Graphic Showcase Banner -->
+        <div class="feature-graphic-showcase">
+          <img src="images/feature-graphic.png" alt="Phulka: Cook. Serve. Nobody leaves hungry. Feature artwork" width="1024" height="500">
+          <div class="feature-graphic-caption">
+            <p><strong>Hand-Crafted GT Road Atmosphere:</strong> From passing buses to bubbling dal, every frame is drawn in code and rendered smoothly.</p>
+            <a href="#download" class="nav-cta">Start Cooking</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Screenshots Gallery
+         ========================================================================== -->
+    <section class="section section-bg-warm" id="screenshots">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Game Gallery</span>
+          <h2 class="section-title">Glimpses from the Grand Trunk Road</h2>
+          <p class="section-lead">
+            Every scene in Phulka is hand-crafted with love, humor, and pure Punjabi warmth. Tap any screenshot to expand.
+          </p>
+        </div>
+
+        <div class="screenshots-gallery-grid">
+          <!-- Screenshot 1 -->
+          <div class="screenshot-item">
+            <div class="screenshot-media-wrap">
+              <img src="images/screenshots/1.png" alt="Phulka Title Screen - Daadi standing proudly at her roadside dhaba">
+            </div>
+            <div class="screenshot-meta">
+              <div class="screenshot-tag">Morning on the GT Road</div>
+              <div class="screenshot-caption">Daadi’s roadside dhaba welcomes the first light and highway traffic.</div>
+            </div>
+          </div>
+
+          <!-- Screenshot 2 -->
+          <div class="screenshot-item">
+            <div class="screenshot-media-wrap">
+              <img src="images/screenshots/2.png" alt="Daadi handing over the keys and tawa: Puttar, my knees have retired.">
+            </div>
+            <div class="screenshot-meta">
+              <div class="screenshot-tag">The Handover</div>
+              <div class="screenshot-caption">&ldquo;Puttar, my knees have retired. From today, the tawa is yours.&rdquo;</div>
+            </div>
+          </div>
+
+          <!-- Screenshot 3 -->
+          <div class="screenshot-item">
+            <div class="screenshot-media-wrap">
+              <img src="images/screenshots/3.png" alt="Cooking on the tawa and serving the Delhi to Amritsar truck driver">
+            </div>
+            <div class="screenshot-meta">
+              <div class="screenshot-tag">Cooking Service</div>
+              <div class="screenshot-caption">Slap dough, puff rotis over flames, and serve a hungry trucker on the Delhi–Amritsar run.</div>
+            </div>
+          </div>
+
+          <!-- Screenshot 4 -->
+          <div class="screenshot-item">
+            <div class="screenshot-media-wrap">
+              <img src="images/screenshots/4.png" alt="Kindness in action: Customer with 10 rupees. Daadi: Your dhaba, your call.">
+            </div>
+            <div class="screenshot-meta">
+              <div class="screenshot-tag">Kindness in Action</div>
+              <div class="screenshot-caption">&ldquo;I only have ten rupees...&rdquo; — Daadi: &ldquo;Your dhaba, your call.&rdquo; Feed them anyway!</div>
+            </div>
+          </div>
+
+          <!-- Screenshot 5 -->
+          <div class="screenshot-item">
+            <div class="screenshot-media-wrap">
+              <img src="images/screenshots/5.png" alt="Busy bus rush hour with customers sharing stories and asking for food">
+            </div>
+            <div class="screenshot-meta">
+              <div class="screenshot-tag">The Bus Rush</div>
+              <div class="screenshot-caption">A bus pulls in, dal is bubbling, and everyone arrives hungry at once.</div>
+            </div>
+          </div>
+
+          <!-- Screenshot 6 -->
+          <div class="screenshot-item">
+            <div class="screenshot-media-wrap">
+              <img src="images/screenshots/6.png" alt="Day closed screen: 16 people fed, 170 on the house, bedtime stories with Daadi">
+            </div>
+            <div class="screenshot-meta">
+              <div class="screenshot-tag">Evening Summary</div>
+              <div class="screenshot-caption">16 people fed, ₹170 on the house, and bedtime stories under the quiet stars.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Download Section (iOS & Android)
+         ========================================================================== -->
+    <section class="section" id="download">
+      <div class="container">
+        <div class="download-section-box">
+          <div class="section-header" style="margin-bottom: 24px;">
+            <span class="section-eyebrow">Play Phulka Now</span>
+            <h2 class="section-title">Ready to Fire Up the Tawa?</h2>
+            <p class="section-lead">
+              Phulka is available now on iPhone, iPad, and Android devices. No accounts needed. Install and start cooking immediately.
+            </p>
+          </div>
+
+          <div class="download-grid">
+            <!-- iOS Card -->
+            <div class="download-card">
+              <div class="download-card-header">
+                <div class="download-platform-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 3.62c.67-.82 1.13-1.97.99-3.12-1.02.05-2.22.68-2.92 1.5-.61.71-1.15 1.87-.99 2.99 1.13.09 2.28-.58 2.92-1.37z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="download-platform-title">iOS (Apple)</h3>
+                  <span class="download-platform-status">TestFlight Beta Active</span>
+                </div>
+              </div>
+
+              <div class="download-card-body">
+                <p>
+                  Join our public beta immediately via Apple TestFlight, or view our official App Store release. Compatible with iPhone and iPad running iOS 14.0+.
+                </p>
+                <ul class="download-card-specs">
+                  <li>Instant access via Apple TestFlight</li>
+                  <li>No ads, no accounts, zero tracking</li>
+                  <li>Optimized for ProMotion 120Hz displays</li>
+                </ul>
+              </div>
+
+              <div class="download-actions-row">
+                <a href="https://testflight.apple.com/join/DaCxtxen" class="download-btn-primary" target="_blank" rel="noopener">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                  </svg>
+                  Join iOS TestFlight Beta
+                </a>
+                <a href="https://apps.apple.com/app/id6817085362" class="download-btn-secondary" target="_blank" rel="noopener">
+                  View on App Store (App ID: 6817085362)
+                </a>
+              </div>
+            </div>
+
+            <!-- Android Card -->
+            <div class="download-card">
+              <div class="download-card-header">
+                <div class="download-platform-icon" style="color: #047857;">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M3.609 1.814L13.793 12 3.61 22.186c-.378-.344-.61-.837-.61-1.393V3.207c0-.556.232-1.05.609-1.393zm11.305 11.306l2.12 2.12-11.83 6.64 9.71-8.76zm2.12-2.12l-2.12-2.12 9.71-8.76-11.83 6.64 2.12 2.12zm1.414 1.414l3.18-1.785c.67-.376.67-.99 0-1.366l-3.18-1.785-1.94 1.94 1.94 1.996z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="download-platform-title">Android</h3>
+                  <span class="download-platform-status">Google Play Ready</span>
+                </div>
+              </div>
+
+              <div class="download-card-body">
+                <p>
+                  Download Phulka on any Android phone or tablet running Android 7.0 and up. Fast, battery-friendly, and lightweight.
+                </p>
+                <ul class="download-card-specs">
+                  <li>Package: <code>com.phulka.app</code></li>
+                  <li>Plays 100% offline without internet connection</li>
+                  <li>Safe for players of all ages (PEGI 3 / Everyone)</li>
+                </ul>
+              </div>
+
+              <div class="download-actions-row">
+                <a href="https://play.google.com/store/apps/details?id=com.phulka.app" class="download-btn-primary" style="background: #047857;" target="_blank" rel="noopener">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M5 3l14 9-14 9V3z"/>
+                  </svg>
+                  Get on Google Play
+                </a>
+                <a href="mailto:sifarlabs5@gmail.com?subject=Phulka%20Android%20Closed%20Testing%20Invite" class="download-btn-secondary">
+                  Request Pilot Access via Email
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Privacy & Player Respect
+         ========================================================================== -->
+    <section class="section section-bg-warm" id="privacy">
+      <div class="container">
+        <div class="privacy-respect-grid">
+          <div>
+            <span class="section-eyebrow">Privacy &amp; Respect</span>
+            <h2 class="section-title">A Game That Truly Respects You</h2>
+            <p class="section-lead">
+              We believe video games should bring peace of mind, not harvest personal data. Phulka is built from the ground up to protect your privacy.
+            </p>
+
+            <ul class="privacy-bullets">
+              <li class="privacy-bullet-item">
+                <div class="privacy-bullet-icon">✓</div>
+                <div class="privacy-bullet-text">
+                  <strong>Zero Data Collected</strong>
+                  <span>No accounts, passwords, or personal details are ever requested or stored.</span>
+                </div>
+              </li>
+              <li class="privacy-bullet-item">
+                <div class="privacy-bullet-icon">✓</div>
+                <div class="privacy-bullet-text">
+                  <strong>No Ads or Third-Party SDKs</strong>
+                  <span>No tracking beacons, ad networks, or background telemetry.</span>
+                </div>
+              </li>
+              <li class="privacy-bullet-item">
+                <div class="privacy-bullet-icon">✓</div>
+                <div class="privacy-bullet-text">
+                  <strong>Local Save Only</strong>
+                  <span>Your game progress stays on your own phone in a tiny file. Deleting the app removes it.</span>
+                </div>
+              </li>
+              <li class="privacy-bullet-item">
+                <div class="privacy-bullet-icon">✓</div>
+                <div class="privacy-bullet-text">
+                  <strong>Safe for Children &amp; Families</strong>
+                  <span>Compliant with global privacy standards, COPPA, and GDPR.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="privacy-badge-card">
+            <div class="privacy-badge-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h4>Data Not Collected</h4>
+            <p>
+              Apple App Store and Google Play verified: Phulka collects zero personal data from players.
+            </p>
+            <a href="privacy.html" class="privacy-link-btn">
+              Read Complete Privacy Policy &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       Site Footer
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <h3>Phulka</h3>
+          <p>
+            A cozy cooking game about Daadi's roadside dhaba on the Grand Trunk Road, the hungry people who stop by, and one golden rule: nobody leaves hungry.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Download</h4>
+          <ul class="footer-links-list">
+            <li><a href="https://testflight.apple.com/join/DaCxtxen" target="_blank" rel="noopener">iOS TestFlight Beta</a></li>
+            <li><a href="https://apps.apple.com/app/id6817085362" target="_blank" rel="noopener">Apple App Store</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.phulka.app" target="_blank" rel="noopener">Google Play Store</a></li>
+            <li><a href="mailto:sifarlabs5@gmail.com?subject=Phulka%20Pilot%20Tester">Join Closed Testing</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Game Story</h4>
+          <ul class="footer-links-list">
+            <li><a href="#story">Why It’s Heartwarming</a></li>
+            <li><a href="#gameplay">Dhaba Gameplay</a></li>
+            <li><a href="#screenshots">Screenshots</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="https://harkirat1892.github.io/phulka-privacy/" target="_blank" rel="noopener">GitHub Privacy Page</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Creator</h4>
+          <ul class="footer-links-list">
+            <li><a href="mailto:sifarlabs5@gmail.com">sifarlabs5@gmail.com</a></li>
+            <li><a href="https://github.com/harkirat1892/phulka-website" target="_blank" rel="noopener">GitHub: Website Repo</a></li>
+            <li><a href="https://github.com/harkirat1892/phulka_game" target="_blank" rel="noopener">GitHub: Game Repo</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Harkirat Singh. All rights reserved. Made with love for the Grand Trunk Road.
+        </div>
+        <div>
+          App ID: <code>com.phulka.app</code> &bull; <a href="privacy.html">Privacy Policy</a> &bull; <a href="mailto:sifarlabs5@gmail.com">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
