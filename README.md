@@ -11,4 +11,6 @@ Official showcase website for **Phulka: Dhaba Cooking Game**.
 - `styles.css`: Responsive CSS tailored with warm GT Road dhaba palette.
 - `script.js`: Interactive navigation and screenshot lightbox.
 - `privacy.html`: Dedicated styled privacy policy page.
+- `cozy-cooking-games-ios.html`, `dhaba-cooking-simulator.html`, `desi-cooking-game.html`: long-tail search landing pages (see `docs/store/listing.md`, "Long-tail search pages").
+- `sitemap.xml`, `robots.txt`: add new pages to the sitemap and bump `lastmod`.
 - `images/`: Game icon, 1024x500 feature graphic banner, and gameplay screenshots.

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://harkirat1892.github.io/phulka-website/sitemap.xml

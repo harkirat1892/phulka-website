@@ -1,4 +1,4 @@
-// Phulka: Dhaba Cooking Game - Interactive Script
+// Phulka: Dhaba Cooking Game - Interactive Script & Store Attribution Engine
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Mobile Navigation Toggle
   const navToggle = document.getElementById('navToggle');
@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
       navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
 
-    // Close nav when clicking a link
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('open');
@@ -29,10 +28,86 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }, { passive: true });
 
-  // 3. Screenshot Lightbox
+  // 3. Smart App Store & Play Store Attribution + Outbound Signal Tracking
+  const htmlLang = (document.documentElement.getAttribute('lang') || 'en').toLowerCase().split('-')[0];
+  const pathParts = window.location.pathname.split('/').filter(Boolean);
+  const lastSegment = pathParts[pathParts.length - 1] || 'index.html';
+  const pageSlug = lastSegment.endsWith('.html')
+    ? lastSegment.replace(/\.html$/i, '')
+    : 'index';
+  const campaignId = `${htmlLang}_${pageSlug}`.replace(/[^a-z0-9_-]/gi, '_').slice(0, 40);
+
+  const decorateStoreUrl = (rawHref) => {
+    try {
+      const url = new URL(rawHref, window.location.href);
+      if (url.hostname.includes('apps.apple.com')) {
+        if (!url.searchParams.has('ct')) {
+          url.searchParams.set('pt', 'phulka');
+          url.searchParams.set('ct', campaignId);
+          url.searchParams.set('mt', '8');
+        }
+        return { decorated: url.toString(), store: 'ios_app_store' };
+      }
+      if (url.hostname.includes('testflight.apple.com')) {
+        url.searchParams.set('ct', campaignId);
+        return { decorated: url.toString(), store: 'ios_testflight' };
+      }
+      if (url.hostname.includes('play.google.com')) {
+        if (!url.searchParams.has('referrer')) {
+          const ref = `utm_source=phulka_website&utm_medium=seo_landing&utm_campaign=${campaignId}&utm_content=${htmlLang}`;
+          url.searchParams.set('referrer', ref);
+        }
+        return { decorated: url.toString(), store: 'google_play' };
+      }
+    } catch (_) {
+      // Ignore malformed URLs
+    }
+    return null;
+  };
+
+  const recordStoreClickSignal = (store, targetUrl) => {
+    try {
+      const key = 'phulka_store_signals';
+      const existing = JSON.parse(localStorage.getItem(key) || '{"clicks":[],"counts":{}}');
+      const bucket = `${store}:${campaignId}`;
+      existing.counts[bucket] = (existing.counts[bucket] || 0) + 1;
+      existing.clicks.push({
+        ts: new Date().toISOString(),
+        lang: htmlLang,
+        page: pageSlug,
+        campaign: campaignId,
+        store,
+        targetUrl,
+      });
+      if (existing.clicks.length > 50) existing.clicks = existing.clicks.slice(-50);
+      localStorage.setItem(key, JSON.stringify(existing));
+    } catch (_) {
+      // Ignore storage quota / privacy mode restrictions
+    }
+  };
+
+  window.getPhulkaStoreSignals = () => {
+    try {
+      return JSON.parse(localStorage.getItem('phulka_store_signals') || '{"clicks":[],"counts":{}}');
+    } catch (_) {
+      return { clicks: [], counts: {} };
+    }
+  };
+
+  document.querySelectorAll('a[href]').forEach(anchor => {
+    const info = decorateStoreUrl(anchor.getAttribute('href'));
+    if (!info) return;
+    anchor.setAttribute('href', info.decorated);
+    anchor.setAttribute('data-store-campaign', campaignId);
+    anchor.setAttribute('data-store-target', info.store);
+    anchor.addEventListener('click', () => {
+      recordStoreClickSignal(info.store, info.decorated);
+    });
+  });
+
+  // 4. Screenshot Lightbox
   const screenshotItems = document.querySelectorAll('.screenshot-item');
   if (screenshotItems.length > 0) {
-    // Create lightbox container
     const lightbox = document.createElement('div');
     lightbox.className = 'lightbox-backdrop';
     lightbox.setAttribute('role', 'dialog');
